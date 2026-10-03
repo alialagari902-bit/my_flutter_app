@@ -1,0 +1,46 @@
+name: rejal_allah
+description: تطبيق رجال الله - منصة إيمانية شاملة (بدون إنترنت)
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # للتعامل مع قاعدة البيانات المحلية SQLite
+  sqflite: ^2.3.0
+  path: ^1.8.3
+  flutter_services_binding: ^1.0.0
+
+  # لتحديد مواقيت الصلاة فلكياً بدون نت
+  adhan: ^2.0.1
+  # لمعرفة موقع المستخدم الجغرافي لحساب الصلاة
+  geolocator: ^10.1.0
+  # لتشغيل الصوتيات (القرآن والأدعية)
+  just_audio: ^0.9.36
+  # لحفظ المفضلة والإعدادات
+  shared_preferences: ^2.2.2
+  # بوصلة القبلة
+  flutter_compass: ^0.7.0
+  # الإشعارات والتنبيهات (الأذان والتذكير)
+  flutter_local_notifications: ^17.1.2
+  timezone: ^0.9.2
+  
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  # تعريف الملفات التي سيتم تضمينها في التطبيق (بدون إنترنت)
+  assets:
+    - assets/images/
+    - assets/db/sql_app.db
